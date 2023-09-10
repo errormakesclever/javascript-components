@@ -1,0 +1,31 @@
+<style>
+    .outerBox{
+        border: solid black 2px;
+        border-radius: 30px;
+        height: 20px;
+    }
+    .innerBox{
+        background-color: cyan;
+        height: inherit;
+        border-radius: inherit;
+        width: 50%;
+        transition: 2s;
+        
+    }
+</style>
+<div class="outerBox">
+    <div class="innerBox">
+        
+    </div>
+</div>
+
+<input id="inputBox"> <button id="btn">Load</button>
+<script>
+    var inputBox=document.getElementById("inputBox")
+    var btn=document.getElementById("btn")
+    var innerBox=document.querySelector(".innerBox")
+    btn.addEventListener("click",function(){
+        innerBox.style.width=inputBox.value+"%"  
+        
+    })
+</script>
